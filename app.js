@@ -1,7 +1,7 @@
 class Header extends React.Component {
   render() {
     return (
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <div className="jumbotron">
         <h1>Blake Troksa</h1>
         <p>
           2026 Alpine Drive Boulder, CO 80304
@@ -205,33 +205,40 @@ class Leadership extends React.Component {
 class Ending extends React.Component {
   render() {
     return (
-      <div className='jumbotron'>
+      <div className="jumbotron">
         <p>Updated January 25, 2018</p>
       </div>
     );
   }
 }
 
-class App extends React.Component {
-  render() {
+class Body extends React.Component {
+  render(){
     return (
-      <div className="jumbotron">
-        <Header />
-        <hr />
+    <div className='container'>
+        <div className='row'>
         <Education />
         <Skills />
         <Experience />
         <Projects />
         <Leadership />
-        <Ending />
-        
+     </div>
         </div>
-      
-      )
+    )
   }
 }
-
-
+class App extends React.Component {
+  render() {
+    return (
+        <div>
+        <Header />
+        <hr />
+        <Body />
+        <Ending />
+        </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
