@@ -114,7 +114,7 @@ class Projects extends React.Component {
     return (
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <h3>Projects</h3>
-        <table class="table table-lg">
+        <table className="table table-lg">
           <tbody>
             <tr>
               <th>Wireless Signal Characterization</th>
@@ -178,7 +178,7 @@ class Leadership extends React.Component {
     return (
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <h3>Leadership and Service</h3>
-        <table class="table table-sm">
+        <table className="table table-sm">
           <tbody>
             <tr>
               <th>National Society of Collegiate Scholars</th>
