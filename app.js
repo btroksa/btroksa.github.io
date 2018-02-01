@@ -212,13 +212,13 @@ var Distance = function (_React$Component3) {
       var Latitude = 0;
 
       if (parts.length == 8) {
-        Longitude = Number(parts[0]) + Number(parts[1]) / 60 + Number(parts[2]) / 3600;
-        Latitude = Number(parts[4]) + Number(parts[5]) / 60 + Number(parts[6]) / 3600;
+        Latitude = Number(parts[0]) + Number(parts[1]) / 60 + Number(parts[2]) / 3600;
+        Longitude = Number(parts[4]) + Number(parts[5]) / 60 + Number(parts[6]) / 3600;
         if (parts[3] == "S") {
-          Longitude *= -1;
+          Latitude *= -1;
         }
         if (parts[7] == "W") {
-          Latitude *= -1;
+          Longitude *= -1;
         }
         Longitude = Longitude * (Math.PI / 180);
         Latitude = Latitude * (Math.PI / 180);
@@ -227,13 +227,13 @@ var Distance = function (_React$Component3) {
           Latitude: Latitude
         };
       } else if (parts.length == 6) {
-        Longitude = Number(parts[0]) + Number(parts[1]) / 60;
-        Latitude = Number(parts[3]) + Number(parts[4]) / 60;
+        Latitude = Number(parts[0]) + Number(parts[1]) / 60;
+        Longitude = Number(parts[3]) + Number(parts[4]) / 60;
         if (parts[2] == "S") {
-          Longitude *= -1;
+          Latitude *= -1;
         }
         if (parts[5] == "W") {
-          Latitude *= -1;
+          Longitude *= -1;
         }
         Longitude = Longitude * (Math.PI / 180);
         Latitude = Latitude * (Math.PI / 180);
@@ -242,13 +242,13 @@ var Distance = function (_React$Component3) {
           Latitude: Latitude
         };
       } else if (parts.length == 4) {
-        Longitude = Number(parts[0]);
-        Latitude = Number(parts[2]);
+        Latitude = Number(parts[0]);
+        Longitude = Number(parts[2]);
         if (parts[1] == "S") {
-          Longitude *= -1;
+          Latitude *= -1;
         }
         if (parts[4] == "W") {
-          Latitude *= -1;
+          Longitude *= -1;
         }
         Longitude = Longitude * (Math.PI / 180);
         Latitude = Latitude * (Math.PI / 180);
@@ -257,8 +257,8 @@ var Distance = function (_React$Component3) {
           Latitude: Latitude
         };
       } else if (parts.length == 2) {
-        Longitude = Number(parts[0]) * (Math.PI / 180);
-        Latitude = Number(parts[1]) * (Math.PI / 180);
+        Latitude = Number(parts[0]) * (Math.PI / 180);
+        Longitude = Number(parts[1]) * (Math.PI / 180);
         return {
           Longitude: Longitude,
           Latitude: Latitude
